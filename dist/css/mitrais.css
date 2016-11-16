@@ -35,7 +35,7 @@ body {
 	min-width: 250px;
 	display: inline-block;
 }
-=======
+
 .logo {
   float: left;
   height: 50px;
@@ -52,7 +52,6 @@ body {
   padding-top: 7.5px;
 }
 
->>>>>>> .merge_file_a09496
 /** End of layout CSS **/
 
 /** Side bar CSS **/

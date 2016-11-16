@@ -1,0 +1,9 @@
+diff a/dist/css/mitrais.css b/dist/css/mitrais.css	(rejected hunks)
+@@ -25,6 +25,7 @@
+ 	margin-left: 1.5em;
+ }
+ 
++<<<<<<< .merge_file_a09740
+ #page-header {
+ 	display: inline-block;
+ 	height: 70px;
