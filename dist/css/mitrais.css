@@ -1,6 +1,6 @@
 /** Layout CSS **/
 body {
-	background-color: #E8E8ED;
+	background-color: #E8E8EF;
 }
 
 #page-wrapper {
@@ -22,6 +22,23 @@ body {
 .navbar-header {
 	margin-left: 1.5em;
 }
+
+.logo {
+  float: left;
+  height: 50px;
+  padding: 10px 10px;
+}
+
+.panel-footer.panel-custom {
+  background: #D9D8E6;
+  color: #7F7FA5;
+}
+
+.panel-title.footer-tab{
+  padding-right:2em;
+  padding-top: 7.5px;
+}
+
 /** End of layout CSS **/
 
 /** Side bar CSS **/
@@ -94,10 +111,6 @@ ul .nav-child > li > a {
   float: right;
 }
 
-.panel-title-footer-tab{
-  padding-left:5em;
-  padding-top: 7.5px;
-}
 /* Second font option after FontAwesome matter, change that if you want to change the font*/
 .select2 {
   font-family: 'FontAwesome', 'sans-serif'
