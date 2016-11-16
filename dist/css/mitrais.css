@@ -1,0 +1,105 @@
+/** Layout CSS **/
+body {
+	background-color: #E8E8ED;
+}
+
+#page-wrapper {
+	margin-right: 2em;
+	padding-right: 25px;
+}
+
+.panel-mask {
+	border-top: 1px solid #671e7f;
+	width: 90%;
+}
+
+#outer {
+	margin: 0 auto;
+	width: 95%;
+	background-color: #f8f8f8;
+}
+
+.navbar-header {
+	margin-left: 1.5em;
+}
+/** End of layout CSS **/
+
+/** Side bar CSS **/
+.sidebar {
+	height: 100%;
+	margin-left: 2em;
+}
+
+.side-menu > li {
+	margin-bottom: 20px;
+	border-bottom: 0px !important;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.nav-parent, ul .nav-child {
+	padding-left: 0px;
+	font-size: 13px;
+}
+
+ul .nav-child > li {
+	border-bottom: 0px;
+}
+
+ul .nav-child > li > a {
+	text-decoration:none;
+}
+
+.active > a {
+	font-weight: bold;
+}
+
+.lbl-group {
+	color: grey;
+	height: 25px;
+	display: inline-block;
+}
+
+.panel-side-menu {
+	border-radius: 0px;
+	background-color: #f8f8f8;
+}
+
+.panel-side-menu > .panel-heading {
+	height: 36px;
+}
+
+.panel-side-menu > .panel-heading > span {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: grey;
+	font-size: 11px;
+}
+
+.panel-side-menu > .panel-body {
+	padding-top: 5px;
+}
+
+.side-menu-container {
+	padding-top: 10px;
+	width: 100%;
+}
+/** End of Side bar CSS **/
+
+/** Form Configuration CSS **/
+#search { 
+  width: 200px; 
+  float: right;
+}
+
+.panel-title-footer-tab{
+  padding-left:5em;
+  padding-top: 7.5px;
+}
+/* Second font option after FontAwesome matter, change that if you want to change the font*/
+.select2 {
+  font-family: 'FontAwesome', 'sans-serif'
+}
+/** end of Form Configuration CSS **/
