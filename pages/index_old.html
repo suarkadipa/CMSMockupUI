@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CMS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Select2 css -->
+    <link href="../dist/css/select2.min.css" rel="stylesheet" />
+
+    <style type="text/css">
+    #search { 
+      width: 200px; 
+      float: right;
+    }
+
+    .panel-title-footer-tab{
+      padding-left:5em;
+      padding-top: 7.5px;
+    }
+    
+    /* Second font option after FontAwesome matter, change that if you want to change the font*/
+    .select2 {
+      font-family: 'FontAwesome', 'sans-serif'
+    }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">MITRAIS CMS</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <!-- global search -->
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <select class="form-control select2" style="width: 350px;">
+                      <option value="" disabled selected></option>
+                      <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                      </optgroup>
+                      <optgroup label="German Cars">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                      </optgroup>
+                    </select>
+                </div>
+                </form>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <h4>My Self Review</h4>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        <select class="btn btn-primary">
+                            <option value="4">December 2016 (Current)</option>
+                            <option value="1">December 2014</option>
+                            <option value="3">June 2015</option>
+                            <option value="5">June 2016</option>
+                          </select>
+                    </h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Business Communications</h4>
+                    <div class="input-group">
+                        <input type="search" id="search" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                            <button class="btn btn-default"><i class="glyphicon glyphicon-download-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                  <table class="table table-hover" id="table">
+                  <thead>
+                    <tr>
+                      <th>Competency Item</th>
+                      <th>Last Result</th>
+                      <th>Self Review</th>
+                      <th>Champion Review</th>
+                      <th>Supervisor Review</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Computing Foundations</td>
+                      <td>Working</td>
+                      <td><a href="#">Working</a></td>
+                      <td>...</td>
+                      <td>...</td>
+                    </tr>
+                    <tr>
+                      <td>Software Construction</td>
+                      <td>Working</td>
+                      <td><a href="#">Working</a></td>
+                      <td>...</td>
+                      <td>...</td>
+                    </tr>
+                    <tr>
+                      <td>Software Design</td>
+                      <td>Working</td>
+                      <td><a href="#">Working</a></td>
+                      <td>...</td>
+                      <td>...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="panel-footer">
+                <h3 class="panel-title pull-left" style="padding-top: 7.5px;">Self Review Score: 1.25</h3>
+                <h3 class="panel-title pull-left panel-title-footer-tab">Supervisor Review Score: 1.25</h3>
+                <h3 class="panel-title pull-left panel-title-footer-tab">Panel Score: 1.25</h3>
+                <button class="btn btn-primary pull-right">Save and Next</button>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+
+            <hr>
+
+          <h5>SELF REVIEW</h5>
+          <h4>Professional behaviour & attitude <a href="#" data-toggle="tooltip" title="Professional behaviour & attitude"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">MY CLAIM</h4>
+            </div>
+            <div class="panel-body">
+              <div class="demo">
+                <div class="control-group">
+                  <select class="demo-default btn btn-default">
+                    <option value="1">Entry</option>
+                    <option value="2">Working</option>
+                    <option value="3">Expert</option>
+                    <option value="4">Leadership</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">COMMENT</h4>
+            </div>
+            <div class="panel-body">
+               <div class="form-group">
+                  <label for="comment"></label>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">RELEVANT TAG(S)</h4>
+            </div>
+            <div class="panel-body">
+               <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span> <span class="label label-success">Lorem</span></h5>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">ADD ATTACHMENT</h4>
+            </div>
+            <div class="panel-body">
+               <form class="form-horizontal">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="url">URL Address:</label>
+                  <div class="col-sm-10">
+                    <input type="url" class="form-control" id="url" placeholder="Enter URL Address">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">File:</label>
+                  <div class="col-sm-10"> 
+                    <div class="input-group">
+                        <label class="input-group-btn">
+                            <span class="btn btn-primary">
+                                Browse File&hellip; <input type="file" style="display: none;" multiple>
+                            </span>
+                        </label>
+                        <input type="text" class="form-control" readonly>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <h4>COMPETENCY DEFINITION</h4>
+          <p>Develop yourself and where appropriate others in the context of the Mitrais competency framework. To be aware of one strengths and weakness and actively initiates and illicits feedback.</p>
+
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#pni_entry">ENTRY</a></li>
+            <li><a data-toggle="tab" href="#pni_working">WORKING</a></li>
+            <li><a data-toggle="tab" href="#pni_expert">EXPERT</a></li>
+            <li><a data-toggle="tab" href="#pni_leadership">LEADERSHIP</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="pni_entry" class="tab-pane fade in active">
+              <h5>DESCRIPTION</h5>
+              <p>Basic understanding, supervision required.</p>
+                <div class="table-responsive">
+                  <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th>POSITIVE INDICATOR</th>
+                      <th>NEGATIVE INDICATOR</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="col-md-4">Accepts feedback to improve performance</td>
+                      <td class="col-md-4">Does not accept criticism</td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-4">Understands CRS e.g. current level, carefully prepare realistic self assessment</td>
+                      <td class="col-md-4"></td>
+                    </tr>
+                    <tr>
+                      <td class="col-md-4">
+                       Submits self-assessment as Just In Time self review (in CRS):
+                       a. at the end of a project (if applicable), or
+                       b. at the end of every quarter
+                       Note: Whichever occurs earlier
+                      </td>
+                      <td class="col-md-4"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="pni_working" class="tab-pane fade">
+              <h5>DESCRIPTION</h5>
+              <p>Some content in menu 1.</p>
+            </div>
+            <div id="pni_expert" class="tab-pane fade">
+              <h5>DESCRIPTION</h5>
+              <p>Some content in menu 2.</p>
+            </div>
+            <div id="pni_leadership" class="tab-pane fade">
+              <h5>DESCRIPTION</h5>
+              <p>Some content in menu 2.</p>
+            </div>
+          </div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../vendor/raphael/raphael.min.js"></script>
+    <script src="../vendor/morrisjs/morris.min.js"></script>
+    <script src="../data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Select2 js -->
+    <script src="../dist/js/select2.min.js"></script>
+
+    <!-- Searchable js -->
+    <script src="../dist/js/jquery.searchable-1.1.0.min.js"></script>
+
+    <script type="text/javascript">
+    $(function() {
+
+    // We can attach the `fileselect` event to all file inputs on the page
+    $(document).on('change', ':file', function() {
+      var input = $(this),
+          numFiles = input.get(0).files ? input.get(0).files.length : 1,
+          label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      input.trigger('fileselect', [numFiles, label]);
+    });
+
+    // We can watch for our custom `fileselect` event like this
+    $(document).ready( function() {
+        $(':file').on('fileselect', function(event, numFiles, label) {
+
+            var input = $(this).parents('.input-group').find(':text'),
+                log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+            if( input.length ) {
+                input.val(log);
+            } else {
+                if( log ) alert(log);
+            }
+
+        });
+    });
+
+    $('#table').searchable();
+
+    var placeholder = "&#xf002 Jump to a competency, project, staff or search";
+    $(".select2").select2({
+      placeholder: placeholder,
+      allowClear: true,
+      escapeMarkup: function(m) { 
+         return m; 
+      }
+    });
+
+  });
+  </script>
+</body>
+
+</html>
