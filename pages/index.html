@@ -102,10 +102,20 @@
 				<!-- /.navbar-top-links -->
 
 				<div class="navbar-default sidebar" role="navigation">
-				
+					<div id="page-header">
+						<div class="page-title">
+							<h3>My Self Review</h3>
+						</div>
+							<select class="btn btn-primary">
+								<option value="4">December 2016 (Current)</option>
+								<option value="1">December 2014</option>
+								<option value="3">June 2015</option>
+								<option value="5">June 2016</option>
+				            </select>
+					</div>
 					<!-- side bar for self review -->
 					<div class="panel panel-default panel-side-menu">
-
+						<div class="panel-mask"></div>
 						<div class="panel-heading">
 							<span>INCOMPLETE REVIEW 31</span> 
 						</div>
@@ -178,99 +188,101 @@
 			</nav>
 
 			<div id="page-wrapper">
-				<div class="row">
-					<div class="col-lg-12">
-						<h1 class="page-header">
-							<select class="btn btn-primary">
-								<option value="4">December 2016 (Current)</option>
-								<option value="1">December 2014</option>
-								<option value="3">June 2015</option>
-								<option value="5">June 2016</option>
-							  </select>
-						</h1>
-					</div>
-					<!-- /.col-lg-12 -->
-				</div>
+                <div class="panel panel-default panel-content">
+                    <div class="panel-heading">
+                        <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Business Communications</h4>
+                        <div class="input-group">
+                            <input type="search" id="search" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                                <button class="btn btn-default"><i class="glyphicon glyphicon-download-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading">
-					  <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Business Communications</h4>
-						<div class="input-group">
-							<input type="search" id="search" class="form-control" placeholder="Search">
-							<div class="input-group-btn">
-								<button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-								<button class="btn btn-default"><i class="glyphicon glyphicon-download-alt"></i></button>
-							</div>
-						</div>
-					</div>
+                    <div class="panel-body">
+                        <table class="table table-hover" id="table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>Competency Item</th>
+                                    <th>Last Result</th>
+                                    <th>Self Review</th>
+                                    <th>Champion Review</th>
+                                    <th>Supervisor Review</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Computing Foundations</td>
+                                    <td>Working</td>
+                                    <td><a href="#">Working</a></td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Software Construction</td>
+                                    <td>Working</td>
+                                    <td><a href="#">Working</a></td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>Software Design</td>
+                                    <td>Working</td>
+                                    <td><a href="#">Working</a></td>
+                                    <td>...</td>
+                                    <td>...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-footer panel-custom">
+                        <h3 class="panel-title pull-left" style="padding-top: 7.5px;">Self Review Score: 1.25</h3>
+                        <h3 class="panel-title pull-left panel-title-footer-tab">Supervisor Review Score: 1.25</h3>
+                        <h3 class="panel-title pull-left panel-title-footer-tab">Panel Score: 1.25</h3>
+                        <button class="btn btn-primary pull-right">Save and Next</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <hr>
 
-					<div class="panel-body">
-					  <table class="table table-hover" id="table">
-					  <thead>
-						<tr>
-						  <th>Competency Item</th>
-						  <th>Last Result</th>
-						  <th>Self Review</th>
-						  <th>Champion Review</th>
-						  <th>Supervisor Review</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td>Computing Foundations</td>
-						  <td>Working</td>
-						  <td><a href="#">Working</a></td>
-						  <td>...</td>
-						  <td>...</td>
-						</tr>
-						<tr>
-						  <td>Software Construction</td>
-						  <td>Working</td>
-						  <td><a href="#">Working</a></td>
-						  <td>...</td>
-						  <td>...</td>
-						</tr>
-						<tr>
-						  <td>Software Design</td>
-						  <td>Working</td>
-						  <td><a href="#">Working</a></td>
-						  <td>...</td>
-						  <td>...</td>
-						</tr>
-					  </tbody>
-					</table>
-				  </div>
-				  <div class="panel-footer panel-custom">
-					<h3 class="panel-title pull-left" style="padding-top: 7.5px;">Self Review Score: 1.25</h3>
-					<h3 class="panel-title pull-left panel-title-footer-tab">Supervisor Review Score: 1.25</h3>
-					<h3 class="panel-title pull-left panel-title-footer-tab">Panel Score: 1.25</h3>
-					<button class="btn btn-primary pull-right">Save and Next</button>
-					<div class="clearfix"></div>
-				  </div>
-				</div>
+                <h5>SELF REVIEW</h5>
+                <h4>Professional behaviour & attitude <a href="#" data-toggle="tooltip" title="Professional behaviour & attitude"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
 
-				<hr>
-
-			  <h5>SELF REVIEW</h5>
-			  <h4>Professional behaviour & attitude <a href="#" data-toggle="tooltip" title="Professional behaviour & attitude"><span class="glyphicon glyphicon-question-sign"></span></a></h4>
-
-			  <div class="panel panel-default">
-				<div class="panel-heading">
-				  <h4 class="panel-title">MY CLAIM</h4>
-				</div>
-				<div class="panel-body">
-				  <div class="demo">
-					<div class="control-group">
-					  <select class="demo-default btn btn-default">
-						<option value="1">Entry</option>
-						<option value="2">Working</option>
-						<option value="3">Expert</option>
-						<option value="4">Leadership</option>
-					  </select>
-					</div>
-				  </div>
-				</div>
-			  </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">MY CLAIM</h4>
+                </div>
+                <div class="panel-body">
+                  <div class="demo">
+                    <div class="control-group">
+                      <select class="demo-default btn btn-default">
+                        <option value="1">Entry</option>
+                        <option value="2">Working</option>
+                        <option value="3">Expert</option>
+                        <option value="4">Leadership</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        <select class="btn btn-primary">
+                            <option value="4">December 2016 (Current)</option>
+                            <option value="1">December 2014</option>
+                            <option value="3">June 2015</option>
+                            <option value="5">June 2016</option>
+                          </select>
+                    </h1>
+                </div>
+            </div>
 
 			  <div class="panel panel-default">
 				<div class="panel-heading">
@@ -411,6 +423,9 @@
 
     <!-- Searchable js -->
     <script src="../dist/js/jquery.searchable-1.1.0.min.js"></script>
+    
+    <!-- Custom Mitrais JavaScript -->
+    <script src="../dist/js/mitrais.js"></script>
 
     <script type="text/javascript">
     $(function() {
@@ -425,24 +440,6 @@
 
     // We can watch for our custom `fileselect` event like this
     $(document).ready( function() {
-		/** CSS setting **/
-		var pageheight = Math.max($("#page-wrapper").height(), $(".panel-side-menu").height());
-        $("#page-wrapper").height(pageheight);
-        $(".panel-side-menu").height(pageheight);
-		
-		$('#page-wrapper').css('margin-left', function (index, curValue) {
-			return parseInt(curValue, 10) + 16 + 'px';
-		});
-		
-        $('#wrapper').css('height', function (index, curValue) {
-			return parseInt(curValue, 10) + 30 + 'px';
-		});
-		
-		$('body').css('height', function (index, curValue) {
-			return parseInt(curValue, 10) + 30 + 'px';
-		});
-		/** end of CSS setting **/
-	
         $(':file').on('fileselect', function(event, numFiles, label) {
 
             var input = $(this).parents('.input-group').find(':text'),
