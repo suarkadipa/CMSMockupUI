@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DevOOPS v2</title>
+    <meta name="description" content="description">
+    <meta name="author" content="DevOOPS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="plugins/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link href="plugins/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+    <link href="plugins/xcharts/xcharts.min.css" rel="stylesheet">
+    <link href="plugins/select2/select2.css" rel="stylesheet">
+    <link href="plugins/justified-gallery/justifiedGallery.css" rel="stylesheet">
+    <link href="css/style_v1.css" rel="stylesheet">
+    <!-- Mitrais CMS css -->
+    <link href="css/mitrais.css" rel="stylesheet">
+    <link href="plugins/chartist/chartist.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap-table CSS -->
+    <link href="plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="toolbar">
+    <label>Business Communications</label>
+</div>
+<table 
+     id="table"
+     data-classes="table table-hover table-condensed"
+     data-striped="true" 
+     data-search="true" 
+     data-show-footer="false"
+     data-show-export="true"
+     data-toolbar="#toolbar">
+  <thead>
+    <tr>
+      <th data-field="comp_item" data-footer-formatter="selfReviewScoreTextFormatter">Competency Item</th>
+      <th data-field="last_result" data-footer-formatter="spvReviewScoreTextFormatter">Last Result</th>
+      <th data-field="self_review" data-footer-formatter="panelScoreTextFormatter">Self Review</th>
+      <th data-field="champ_review">Champion Review</th>
+      <th data-field="spv_review">Supervisor Review</th>
+    </tr>
+  </thead>
+</table>
+<div class="row" style="background-color: violet; padding: 10px">
+  <div class="col-lg-3"><label>Self Review Score: 1.25</label></div>
+  <div class="col-lg-3"><label>Supervisor Review Score: 1.25</label></div>
+  <div class="col-lg-3"><label>Panel Score: 1.25</label></div>
+  <div class="col-lg-3"><button class="btn btn-primary pull-right">Save and Next</button></div>
+</div>
+    
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    <script src="plugins/tinymce/tinymce.min.js"></script>
+    <script src="plugins/tinymce/jquery.tinymce.min.js"></script>
+    <!-- All functions for this theme + document.ready processing -->
+    <script src="js/devoops.js"></script>
+    <script src="plugins/select2/select2.js"></script>
+    <!-- Bootstrap-table JS -->
+    <script src="plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="plugins/bootstrap-table/extensions/export/bootstrap-table-export.js"></script>
+    <!-- For Bootstrap-table export, please keep this include in order -->
+    <script type="text/javascript" src="plugins/table-export-jquery/libs/FileSaver/FileSaver.min.js"></script>
+    <script type="text/javascript" src="plugins/table-export-jquery/libs/js-xlsx/xlsx.core.min.js"></script>
+    <script type="text/javascript" src="plugins/table-export-jquery/libs/jsPDF/jspdf.min.js"></script>
+    <script type="text/javascript" src="plugins/table-export-jquery/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+    <script type="text/javascript" src="plugins/table-export-jquery/libs/html2canvas/html2canvas.min.js"></script>
+    <script type="text/javascript" src="plugins/table-export-jquery/tableExport.min.js"></script>
+    
+    <!-- <script type="text/javascript" src="plugins/table-export-jquery-old/tableExport.js"></script>
+    <script type="text/javascript" src="plugins/table-export-jquery-old/jquery.base64.js"></script> -->
+    
+    <script type="text/javascript">
+    var $table = $('#table');
+    var mydata = 
+    [
+        {
+            "comp_item": "Computing Foundations",
+            "last_result": "Working",
+            "self_review": "Working",
+            "champ_review": "...",
+            "spv_review": "..."
+        },
+        {
+            "comp_item": "Software Construction",
+            "last_result": "Working",
+            "self_review": "Working",
+            "champ_review": "...",
+            "spv_review": "..."
+        },
+        {
+            "comp_item": "Software Design",
+            "last_result": "Working",
+            "self_review": "Working",
+            "champ_review": "...",
+            "spv_review": "..."
+        }
+    ];
+        
+    $(function() {
+
+    // We can attach the `fileselect` event to all file inputs on the page
+    $(document).on('change', ':file', function() {
+      var input = $(this),
+          numFiles = input.get(0).files ? input.get(0).files.length : 1,
+          label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      input.trigger('fileselect', [numFiles, label]);
+    });
+
+    // We can watch for our custom `fileselect` event like this
+    $(document).ready( function() {
+        $(':file').on('fileselect', function(event, numFiles, label) {
+
+            var input = $(this).parents('.input-group').find(':text'),
+                log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+            if( input.length ) {
+                input.val(log);
+            } else {
+                if( log ) alert(log);
+            }
+
+        });
+    });
+
+    var placeholder = "&#xf002 Jump to a competency, project, staff or search";
+    $(".select2").select2({
+      placeholder: placeholder,
+      allowClear: true,
+      escapeMarkup: function(m) { 
+         return m; 
+      }
+    });
+        
+    $('#table').bootstrapTable({
+        data: mydata
+    });    
+    console.log(mydata); 
+    
+    $('#table').tableExport({});
+  });
+
+    function selfReviewScoreTextFormatter(data) {
+        return 'Self Review Score: 1.25';
+    }
+        
+    function spvReviewScoreTextFormatter(data) {
+        return 'Supervisor Review Score: 1.25';
+    }
+        
+    function panelScoreTextFormatter(data) {
+        return 'Panel Score: 1.25';
+    }
+    
+    
+  </script>
+</body>
+</html>

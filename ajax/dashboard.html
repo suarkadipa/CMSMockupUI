@@ -522,8 +522,16 @@
 					<div class="col-xs-6"><p>Date</p><div id="date"></div></div>
 					<div class="col-xs-6"><p>Price</p><div id="closeValue"></div></div>
 				</div>
-                
-                <table id="table" class="table table-hover"  data-striped="true" data-search="true">
+                <div id="toolbar">
+                    <label>Business Communications</label>
+                </div>
+                <table 
+                       id="table" 
+                       class="table table-hover"  
+                       data-striped="true" 
+                       data-search="true"
+                       data-toolbar="#toolbar"
+                       data-show-export="true">
                   <thead>
                     <tr>
                       <th data-field="comp_item">Competency Item</th>
