@@ -22,7 +22,8 @@ body {
 }
 
 #navbar-top-wrapper {
-    height: 50px;
+    min-height: 50px;
+    max-height: 100px;
 }
 
 .navbar-top {
@@ -51,7 +52,7 @@ body {
     margin-bottom: 1.5em;
 }
 
-#main > .row {
+#main > #ajax-page > .row {
     padding-left: 1.5em;
     padding-right: 1.5em;
 }
@@ -64,10 +65,25 @@ body {
     white-space: nowrap;
 }
 
+#page-title > #sub-title {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#page-title > h3 > a > .glyphicon {
+    font-size: 17px;
+}
+
 #content {
     -webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+}
+
+@media (max-width:764px) {
+    .row > #page-header-title {
+        margin-top: 50px; 
+    }
 }
 /** End of override layout CSS**/
 

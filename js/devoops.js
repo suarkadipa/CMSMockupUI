@@ -1140,8 +1140,18 @@ function LoadAjaxContent(url){
 		url: url,
 		type: 'GET',
 		success: function(data) {
-			$('#ajax-content').html(data);
-			$('.preloader').hide();
+			//Testing only.
+			//Using another div to load html page 
+			if(url != "ajax/selfreview.html")
+			{
+				$('#ajax-content').html(data);
+				$('.preloader').hide();
+			}
+			else
+			{
+				$('#ajax-page').html(data);
+				$('.preloader').hide();
+			}
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
 			alert(errorThrown);
