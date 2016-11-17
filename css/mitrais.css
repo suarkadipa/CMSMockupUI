@@ -21,6 +21,10 @@ body {
     padding-bottom: 1em;
 }
 
+#navbar-top-wrapper {
+    height: 50px;
+}
+
 .navbar-top {
     margin: 0;
     border: 0;
@@ -28,6 +32,9 @@ body {
     -moz-border-radius: 0;
     border-radius: 0;
     z-index: 2000;
+    /** Remove below css setting, if don't want to use fixed header **/
+    position: fixed;
+    width: 95%;
 }
 
 .navbar-top > .container-fluid {
@@ -49,7 +56,7 @@ body {
     padding-right: 1.5em;
 }
 
-.row > #page-title {
+.row > #page-header-title {
     height: 60px; 
     width:100%;
     display:flex;
@@ -116,18 +123,6 @@ body {
     color: black;
 }
 
-
-
-#sidebar-left > .panel {
-    width: 100%;
-    height: 100%;
-    border: none;
-    box-shadow: none;
-    background-color: #f8f8f8;
-    border-radius: 0px;
-    border-top: 1px;
-}
-
 .menu-mask {
 	border-top: 1px solid #671e7f;
 	width: 90%;
@@ -139,6 +134,10 @@ body {
 
 .select2 {
     font-family: 'FontAwesome', 'Arial'
+}
+
+select.btn-primary {
+    font-weight: normal;
 }
 
 /** End of select2 CSS **/
