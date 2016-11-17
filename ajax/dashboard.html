@@ -62,6 +62,7 @@
 			<li><a href="#" class="tab-link" id="planning">Planning</a></li>
 			<li><a href="#" class="tab-link" id="netmap">Network map</a></li>
 			<li><a href="#" class="tab-link" id="stock">Yahoo finance</a></li>
+            <li><a href="#" class="tab-link" id="review">My Self Review</a></li>
 		</ul>
 	</div>
 	<div id="dashboard_tabs" class="col-xs-12 col-sm-10">
@@ -502,6 +503,40 @@
 			</div>
 		</div>
 		<!--End Dashboard Tab 7-->
+        <!--Start Dashboard Tab 8-->
+		<div id="dashboard-review" class="row" style="visibility: hidden; position: absolute;">
+			<div class="col-xs-12">
+				<h4 class="page-header">Stocks from Yahoo</h4>
+				<div id="inputSymbol">
+					<p>Enter Stock</p>
+					<input id="txtSymbol" class="required" Placeholder="Symbol" />
+					<input id="startDate" class="datePick required" type="text"  Placeholder="From" />
+					<input id="endDate" class="datePick" type="text" Placeholder="To"  />
+					<button id="submit">Submit</button>
+				</div>
+				<div class="realtime" style="margin-top:40px;">
+					<div class="col-xs-6"><p>Name</p><span id="symbol"></span></div>
+					<div class="col-xs-6"><p>RealtimeBid</p><span id="bidRealtime"></span></div>
+				</div>
+				<div class="historical">
+					<div class="col-xs-6"><p>Date</p><div id="date"></div></div>
+					<div class="col-xs-6"><p>Price</p><div id="closeValue"></div></div>
+				</div>
+                
+                <table id="table" class="table table-hover"  data-striped="true" data-search="true">
+                  <thead>
+                    <tr>
+                      <th data-field="comp_item">Competency Item</th>
+                      <th data-field="last_result">Last Result</th>
+                      <th data-field="self_review">Self Review</th>
+                      <th data-field="champ_review">Champion Review</th>
+                      <th data-field="spv_review">Supervisor Review</th>
+                    </tr>
+                  </thead>
+                </table>
+			</div>
+		</div>
+		<!--End Dashboard Tab 8-->
 	</div>
 	<div class="clearfix"></div>
 </div>
