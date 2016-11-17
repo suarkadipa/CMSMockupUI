@@ -1,0 +1,116 @@
+/** Override Layout CSS **/
+#logo {
+    position:relative;
+    background-color: white;
+    display: block;
+    line-height: 50px;
+}
+
+#top-panel > .row {
+    background-color: white;
+}
+
+body {
+	background-color: #E8E8EF;
+}
+
+#outer {
+	margin: 0 auto;
+	width: 95% !important;
+	background-color: #f8f8f8;
+}
+
+.navbar-top {
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    z-index: 2000;
+}
+
+.navbar-top > .container-fluid {
+    background-color: white;
+}
+
+.navbar-top > .container-fluid > .row {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+#main {
+    margin-top: 0px;
+}
+
+#main > .row {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.row > #page-title {
+    height: 60px; 
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+#content {
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+/** End of override layout CSS**/
+
+/** Side Menu CSS **/
+
+#sidebar-left {
+    background-color: #f8f8f8;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 1px solid #ddd;
+}
+
+.nav.main-menu {
+    width: 100%;
+    margin: 0px !important;
+    background-color: #f8f8f8;
+}
+
+.nav.main-menu > li.group-title > span {
+    padding-left: 15px;
+    color: grey;
+}
+
+.nav.main-menu > li {
+    padding-left: 0px;
+}
+
+.nav.main-menu > li > ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.nav.main-menu > li > ul > li.active > a {
+    font-weight: bold;
+    color: black;
+}
+
+
+
+#sidebar-left > .panel {
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: #f8f8f8;
+    border-radius: 0px;
+    border-top: 1px;
+}
+
+.menu-mask {
+	border-top: 1px solid #671e7f;
+	width: 90%;
+}
+
+/** End of Side Menu CSS **/
