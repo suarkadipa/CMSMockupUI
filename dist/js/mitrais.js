@@ -2,8 +2,6 @@ $(function() {
     $(document).ready( function() {
             /** CSS setting **/
             var pageheight = Math.max($("#page-wrapper").height(), $(".panel-side-menu").height());
-            alert("page-wrap : " + $("#page-wrapper").height().toString() + " panel side : " + $(".panel-side-menu").height().toString());
-            alert(pageheight);
             $("#page-wrapper").height(pageheight);
             $(".panel-side-menu").height(pageheight);
             
