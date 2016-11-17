@@ -137,8 +137,17 @@ body {
     font-family: 'FontAwesome', 'Arial'
 }
 
+/** End of select2 CSS **/
+
 select.btn-primary {
     font-weight: normal;
 }
 
-/** End of select2 CSS **/
+.table-borderless tbody tr td,
+.table-borderless tbody tr th,
+.table-borderless thead tr th,
+.table-borderless thead tr td,
+.table-borderless tfoot tr th,
+.table-borderless tfoot tr td {
+    border: none;
+}
