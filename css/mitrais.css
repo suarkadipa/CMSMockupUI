@@ -15,9 +15,10 @@ body {
 }
 
 #outer {
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	width: 95% !important;
 	background-color: #f8f8f8;
+    padding-bottom: 1em;
 }
 
 .navbar-top {
@@ -40,6 +41,7 @@ body {
 
 #main {
     margin-top: 0px;
+    margin-bottom: 1.5em;
 }
 
 #main > .row {
@@ -59,7 +61,6 @@ body {
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
-
 /** End of override layout CSS**/
 
 /** Side Menu CSS **/
@@ -77,18 +78,37 @@ body {
     background-color: #f8f8f8;
 }
 
-.nav.main-menu > li.group-title > span {
+.nav.main-menu > li.menu-header {
+    height: 36px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav.main-menu > li.menu-header > span {
+    margin-top: 0px;
+	margin-bottom: 0px;
+	color: grey;
+    line-height: 36px;
     padding-left: 15px;
+}
+
+.nav.main-menu > li.group-title > span {
     color: grey;
+    padding-left: 15px;
 }
 
-.nav.main-menu > li {
+.nav.main-menu > li.group-title {
     padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
-.nav.main-menu > li > ul {
+.nav.main-menu > li.group-title > ul {
     list-style-type: none;
     padding-left: 15px;
+}
+
+.nav.main-menu > li.group-title > ul > li > a {
+    font-size: 12px;
 }
 
 .nav.main-menu > li > ul > li.active > a {
@@ -116,7 +136,9 @@ body {
 /** End of Side Menu CSS **/
 
 /** select2 CSS **/
+
 .select2 {
     font-family: 'FontAwesome', 'Arial'
 }
+
 /** End of select2 CSS **/
