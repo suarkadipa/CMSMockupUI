@@ -114,3 +114,9 @@ body {
 }
 
 /** End of Side Menu CSS **/
+
+/** select2 CSS **/
+.select2 {
+    font-family: 'FontAwesome', 'Arial'
+}
+/** End of select2 CSS **/

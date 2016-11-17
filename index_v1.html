@@ -16,8 +16,11 @@
 		<link href="plugins/select2/select2.css" rel="stylesheet">
 		<link href="plugins/justified-gallery/justifiedGallery.css" rel="stylesheet">
 		<link href="css/style_v1.css" rel="stylesheet">
+        <!-- Mitrais CMS css -->
         <link href="css/mitrais.css" rel="stylesheet">
 		<link href="plugins/chartist/chartist.min.css" rel="stylesheet">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
@@ -59,22 +62,36 @@
                     <div id="top-panel" class="col-xs-12 col-sm-10">
                         <div class="row">
                             <div class="col-xs-8 col-sm-4">
+                                <!-- global search -->
                                 <div id="search">
-                                    <input type="text" placeholder="search"/>
-                                    <i class="fa fa-search"></i>
+                                    <select class="select2" style="width: 350px;">
+                                      <option value="" disabled selected></option>
+                                      <option value="" disabled selected></option>
+                                      <optgroup label="Competencies">
+                                        <option value="Computing Design">Computing Design</option>
+                                        <option value="Computing Foundations">Computing Foundations</option>
+                                        <option value="Medical Computing Analysis">Medical Computing Analysis</option>
+                                        <option value="Mining Computing Design">Mining Computing Design</option>
+                                      </optgroup>
+                                      <optgroup label="Projects">
+                                        <option value="Design Computing Australia">Design Computing Australia</option>
+                                        <option value="Mitrais Computing Account">Mitrais Computing Account</option>
+                                        <option value="Mitrais Computing Solution">Mitrais Computing Solution</option>
+                                      </optgroup>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-xs-4 col-sm-8 top-panel-right">
                                 <ul class="nav navbar-nav pull-right panel-menu">
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
-                                            <div class="avatar">
+                                            <i class="fa fa-angle-down pull-right"></i>
+                                            <div class="avatar pull-right">
                                                 <img src="img/avatar.jpg" class="img-circle" alt="avatar" />
                                             </div>
-                                            <i class="fa fa-angle-down pull-right"></i>
                                             <div class="user-mini pull-right">
-                                                <span class="welcome">Welcome,</span>
-                                                <span>Jane Devoops</span>
+                                                <span class="welcome">John Applesed</span>
+                                                <span>Reviewer</span>
                                             </div>
                                         </a>
                                         <ul class="dropdown-menu">
@@ -270,6 +287,8 @@
         <script src="plugins/tinymce/jquery.tinymce.min.js"></script>
         <!-- All functions for this theme + document.ready processing -->
         <script src="js/devoops.js"></script>
+        <script src="plugins/select2/select2.js"></script>
+        <script src="js/mitrais.js"></script>
     </div>
     <!-- end of #outer -->
 </body>
