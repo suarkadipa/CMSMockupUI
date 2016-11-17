@@ -3,11 +3,17 @@ body {
 	background-color: #E8E8EF;
 }
 
+.navbar-static-top {
+    background-color: white;
+}
+
 #page-wrapper {
 	margin-right: 2em;
 	margin-top: 70px;
     padding-right: 0px;
     padding-left: 0px;
+    height: auto;
+    min-height: inherit;
 }
 
 .panel-mask {
@@ -97,6 +103,7 @@ ul .nav-child > li > a {
 	border-radius: 0px;
 	background-color: #f8f8f8;
 	width: 250px;
+    height: auto;
 }
 
 .panel-side-menu > .panel-heading {
