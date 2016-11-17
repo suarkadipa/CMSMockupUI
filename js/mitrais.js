@@ -38,8 +38,4 @@ $(function () {
         data: mydata
     });
     console.log(mydata);
-    
-    $('#table').tableExport({
-        
-    });
 });
