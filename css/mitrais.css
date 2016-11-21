@@ -159,7 +159,6 @@ body {
 select.btn-primary {
     font-weight: normal;
 }
-
 .table-borderless tbody tr td,
 .table-borderless tbody tr th,
 .table-borderless thead tr th,
@@ -167,6 +166,11 @@ select.btn-primary {
 .table-borderless tfoot tr th,
 .table-borderless tfoot tr td {
     border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #F0F0FA;
 }
 
 /** Tab CSS **/
