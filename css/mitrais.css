@@ -176,3 +176,19 @@ select.btn-primary {
 }
 
 /** End of Tab CSS **/
+
+hr {
+    height: 1px;
+    color: gainsboro;
+    background-color: gainsboro;
+    border: none;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #A785DA;
+    background-color: white;
+}
+
+.bootstrap-table {
+    background-color: white;
+}
