@@ -188,11 +188,20 @@ hr {
     border: none;
 }
 
+/** pills color in dashboar **/
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #A785DA;
     background-color: white;
 }
 
+/** bootstrap table bg color **/
 .bootstrap-table {
     background-color: white;
+}
+
+/** dropdown hover color in bootstrap table **/
+.nav.main-menu > li > a:hover, .nav.main-menu > li > a:focus, .nav.main-menu > li.active > a, .nav.main-menu .open > a, .nav.main-menu .open > a:hover, .nav.main-menu .open > a:focus, .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li.active > a,
+.nav.msg-menu > li > a:hover, .nav.msg-menu > li > a:focus, .nav.msg-menu > li.active > a, .nav.msg-menu .open > a, .nav.msg-menu .open > a:hover, .nav.msg-menu .open > a:focus {
+  background:rgba(0, 0, 0, 0.1);
+  color:#333;
 }
