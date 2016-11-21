@@ -1140,9 +1140,7 @@ function LoadAjaxContent(url){
 		url: url,
 		type: 'GET',
 		success: function(data) {
-			//Testing only.
-			//Using another div to load html page 
-			if(url != "ajax/selfreview.html")
+			if(url == "ajax/dashboard.html")
 			{
 				$('#ajax-content').html(data);
 				$('.preloader').hide();
