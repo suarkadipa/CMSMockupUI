@@ -168,3 +168,11 @@ select.btn-primary {
 .table-borderless tfoot tr td {
     border: none;
 }
+
+/** Tab CSS **/
+.tab-content{
+    background-color:white;
+    padding:5px
+}
+
+/** End of Tab CSS **/
